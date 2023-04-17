@@ -16,18 +16,19 @@
 
             if(isset($emailLogin) && isset($senhaLogin)){
                 if(str_contains($texto , $emailLogin) && str_contains($texto , $senhaLogin)){
-                    echo $_POST['emailLogin'] . " logado com sucesso.";    
+                    echo 
+                    "<div class=classeDivPHP>" . $_POST['emailLogin'] . " logado com sucesso." . "</div>";    
                 }else{
-                    echo "<a href=index.php><button>Cadastrar-se</button></a> <br>";
-                    echo "Usuário não encontrado";
+                    echo "<div class=classeDivPHP> <a href=index.php> <button>Cadastrar-se</button> </a> </div> <br>";
+                    echo "<div class=classeDivPHP> Usuário não encontrado </div>";
                 }
             }else{
-                echo "<a href=index.php><button>Cadastrar-se</button></a> <br>";
-                echo "Email não cadastrado.";
+                echo "<div class=classeDivPHP> <a href=index.php><button>Cadastrar-se</button></a> </div> <br>";
+                echo "<div class=classeDivPHP> Email não cadastrado. </div>";
             }
         }else{
-            echo "<a href=index.php><button>Cadastrar-se</button></a> <br>";
-            echo "Registro inexistente";
+            echo "<div class=classeDivPHP> <a href=index.php><button>Cadastrar-se</button></a> </div> <br>";
+            echo "Registro inexistente </div>";
         }
     }
 ?>
@@ -38,16 +39,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Login</title>
 </head>
 <body>
-    <h1>Login</h1>
-    <form name="dados_pessoas" method="POST" action="resultado.php">
-        <label for="emailLogin">Email:</label><input type="text" name="emailLogin" id="emailLogin"> <br>
-        <label for="senhaLogin">Senha:</label><input type="password" name="senhaLogin" id="senhaLogin"><br>  
-        <input type="submit" value="entrar" id="Entrar">
-        <br>
-    </form>
+    <div class="container">
+        <div class="box">
+            <h1>Login</h1>
+            <form name="dados_pessoas" method="POST" action="resultado.php">
+                <label for="emailLogin">Email:</label><br>
+                <input class="input" type="text" name="emailLogin" id="emailLogin"> <br>
+                <label for="senhaLogin">Senha:</label><br>
+                <input class="input" type="password" name="senhaLogin" id="senhaLogin"><br>
+                <input class="botao" type="submit" value="Entrar" id="Entrar">
+                <br>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
 ⠀
