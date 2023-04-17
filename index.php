@@ -18,8 +18,6 @@
                         <label for="senha">Senha:</label><br>
                         <input class="input" type="password" name="senha" id="senha" required> <br>
                         <input class="botao" type="submit" value="Cadastrar" id="cadastrar">
-                        
-
                     </form>
                 </div>
             </div>
